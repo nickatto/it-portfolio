@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Troubleshooting | Nicholas Voronetskis</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><span class="logo-box">NV</span><span class="home-label">Home</span></a>
+      <div class="nav-links">
+        <a href="experience.html">Experience</a>
+        <a class="active" href="troubleshooting.html">Troubleshooting</a>
+        <a href="resume.html">Résumé</a>
+        <a href="blog.html">Blog</a>
+        <a class="fun-button" href="fun-facts.html">Fun Facts</a>
+        <button class="contact-button" type="button" onclick="toggleContact()">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page-intro container">
+      <p class="eyebrow">HELP DESK WORKFLOW</p>
+      <h1>How I approach common support problems.</h1>
+      <p>
+        I start by understanding the issue, narrowing down the cause, applying the safest fix,
+        confirming the result with the user, and documenting what happened.
+      </p>
+    </section>
+
+    <section class="section container troubleshooting-layout">
+      <div class="issue-list">
+        <button class="issue-button active" type="button" onclick="showIssue('login', this)">User cannot sign in</button>
+        <button class="issue-button" type="button" onclick="showIssue('internet', this)">No internet connection</button>
+        <button class="issue-button" type="button" onclick="showIssue('outlook', this)">Outlook is not syncing</button>
+        <button class="issue-button" type="button" onclick="showIssue('vpn', this)">VPN will not connect</button>
+        <button class="issue-button" type="button" onclick="showIssue('slow', this)">Computer is running slowly</button>
+      </div>
+
+      <article class="resolution-box">
+        <p class="eyebrow">TROUBLESHOOTING STEPS</p>
+        <h2 id="issue-title">User cannot sign in</h2>
+        <ol id="issue-steps">
+          <li>Confirm the username and ask what error message appears.</li>
+          <li>Check whether the account is locked, disabled, or using an expired password.</li>
+          <li>Verify network or VPN access if the user is working remotely.</li>
+          <li>Reset or unlock the account when authorized, then test the login.</li>
+          <li>Document the cause, actions taken, and final result in the ticket.</li>
+        </ol>
+      </article>
+    </section>
+
+    <section id="contact-panel" class="contact-panel container" aria-hidden="true">
+      <div class="contact-card">
+        <button class="close-contact" type="button" aria-label="Close contact information" onclick="toggleContact()">×</button>
+        <p class="eyebrow">CONTACT</p>
+        <h2>Get in touch</h2>
+        <p><strong>Phone:</strong> <a href="tel:+13475879960">(347) 587-9960</a></p>
+        <p><strong>Email:</strong> <a href="mailto:voronetskisnicholas@gmail.com">voronetskisnicholas@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>© 2026 Nicholas Voronetskis</span>
+    <span>Help Desk and IT Support Portfolio</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

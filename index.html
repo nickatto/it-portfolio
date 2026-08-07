@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nicholas Voronetskis IT Support portfolio">
+  <title>Nicholas Voronetskis | IT Support Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Main navigation used across the website -->
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><span class="logo-box">NV</span><span class="home-label">Home</span></a>
+
+      <div class="nav-links">
+        <a href="experience.html">Experience</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="resume.html">Résumé</a>
+        <a href="blog.html">Blog</a>
+        <a class="fun-button" href="fun-facts.html">Fun Facts</a>
+        <button class="contact-button" type="button" onclick="toggleContact()">Contact</button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero container">
+      <div>
+        <div class="status">Open to IT support opportunities</div>
+        <p class="eyebrow">HELP DESK · IT SUPPORT · TECHNICAL SUPPORT</p>
+        <h1>I help users solve technical problems and get back to work.</h1>
+
+        <p class="hero-description">
+          I’m Nicholas Voronetskis, a Computer Science graduate with hands-on
+          experience resolving hardware, software, account, Microsoft 365,
+          and connectivity issues.
+        </p>
+
+        <div class="hero-buttons">
+          <a class="button button-primary" href="experience.html">View my experience</a>
+          <a class="button button-secondary" href="troubleshooting.html">How I troubleshoot</a>
+          <a class="button button-secondary" href="resume.html">View résumé</a>
+        </div>
+
+        <div class="hero-details">
+          <span>Brooklyn, New York</span>
+          <span>English and Russian</span>
+        </div>
+      </div>
+
+      <aside class="profile-card">
+        <img class="profile-photo" src="profile.jpg" alt="Nicholas Voronetskis">
+        <p class="eyebrow">A LITTLE ABOUT ME</p>
+        <h3>Nicholas Voronetskis</h3>
+        <p class="profile-role">IT Support · Help Desk · Technical Support</p>
+        <p class="muted">
+          Brooklyn, New York<br>
+          B.S. Computer Science · NYIT<br>
+          English and Russian
+        </p>
+      </aside>
+    </section>
+
+    <section class="skill-row container" aria-label="Main technical areas">
+      <div>Endpoint Support</div>
+      <div>Networking</div>
+      <div>Systems Administration</div>
+      <div>Microsoft 365 Support</div>
+    </section>
+
+    <section class="section container">
+      <p class="eyebrow">EXPLORE</p>
+      <h2>Choose what you want to see.</h2>
+
+      <div class="card-grid">
+        <article class="card">
+          <p class="eyebrow">PROFESSIONAL EXPERIENCE</p>
+          <h3>IT support and technical operations</h3>
+          <p>See my real support experience, technical work, and practical labs.</p>
+          <a class="card-link" href="experience.html">View experience →</a>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">HELP DESK WORKFLOW</p>
+          <h3>How I troubleshoot</h3>
+          <p>See the steps I use to work through common Tier 1 support issues.</p>
+          <a class="card-link" href="troubleshooting.html">Open troubleshooting →</a>
+        </article>
+
+        <article class="card">
+          <p class="eyebrow">FUN FACTS</p>
+          <h3>Outside of technology</h3>
+          <p>Learn about my judo background, hiking, camping, and travel.</p>
+          <a class="card-link" href="fun-facts.html">View fun facts →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact-panel" class="contact-panel container" aria-hidden="true">
+      <div class="contact-card">
+        <button class="close-contact" type="button" aria-label="Close contact information" onclick="toggleContact()">×</button>
+        <p class="eyebrow">CONTACT</p>
+        <h2>Get in touch</h2>
+        <p><strong>Phone:</strong> <a href="tel:+13475879960">(347) 587-9960</a></p>
+        <p><strong>Email:</strong> <a href="mailto:voronetskisnicholas@gmail.com">voronetskisnicholas@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener">Nicholas Voronetskis</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer container">
+    <span>© 2026 Nicholas Voronetskis</span>
+    <span>Help Desk and IT Support Portfolio</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
