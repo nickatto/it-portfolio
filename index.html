@@ -1,93 +1,119 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PJ1ZQS4GLR');
-</script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Nicholas Voronetskis IT Support portfolio">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-PJ1ZQS4GLR');
+  </script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Nicholas Voronetskis, IT Support and Help Desk portfolio featuring Microsoft 365, Active Directory, troubleshooting, automation, and security projects.">
+  <meta property="og:title" content="Nicholas Voronetskis | IT Support Portfolio">
+  <meta property="og:description" content="Hands on IT support, systems, troubleshooting, and workflow automation.">
+  <meta property="og:type" content="website">
   <title>Nicholas Voronetskis | IT Support Portfolio</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Main navigation used across the website -->
+  <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header">
-    <nav class="navbar container">
-      <a class="logo" href="index.html"><span class="logo-box">NV</span><span class="home-label">Home</span></a>
-
+    <nav class="navbar container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Nicholas Voronetskis home">
+        <span class="brand-mark">NV</span><span class="brand-name">Nicholas Voronetskis</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button>
       <div class="nav-links">
         <a href="resume.html">Résumé</a>
         <a href="experience.html">Projects</a>
-        <a href="troubleshooting.html">Troubleshooting</a>
-        <a href="blog.html">Blog</a>
-        <a href="fun-facts.html">Fun Facts</a>
-        <button class="contact-button" type="button" onclick="toggleContact()">Contact</button>
+        <a href="troubleshooting.html">Support</a>
+        <a href="about.html">About</a>
+        <a class="contact-link" href="#contact">Contact</a>
       </div>
     </nav>
   </header>
 
-  <main>
-    <section class="hero hero-clean container">
+  <main id="main">
+    <section class="hero container">
       <div class="hero-copy">
-        <div class="status">Open to IT support opportunities</div>
-        <p class="eyebrow">IT SUPPORT · SYSTEMS · AUTOMATION</p>
-        <h1>Hands-on IT support, systems work, and practical automation.</h1>
-        <p class="hero-description">
-          I’m Nicholas Voronetskis, a Computer Science graduate focused on Help Desk and IT Support.
-          My experience spans end-user troubleshooting, Microsoft 365, Active Directory, remote support,
-          data quality, and workflow automation.
-        </p>
-        <div class="hero-buttons compact-actions">
-          <a class="button button-primary" href="resume.html">View résumé</a>
-          <a class="text-link" href="experience.html">Explore projects →</a>
+        <div class="availability">Open to Help Desk, Service Desk, Desktop Support, and Technical Support roles</div>
+        <p class="eyebrow">IT Support · Systems · Automation</p>
+        <h1>IT support with hands on experience across users, systems, and automation.</h1>
+        <p class="hero-description">I’m Nicholas Voronetskis, a Computer Science graduate in New York. I’ve supported users with Windows, Microsoft 365, Active Directory, remote troubleshooting, and access issues, while also building practical automation and security projects outside of work.</p>
+        <div class="hero-actions">
+          <a class="primary-link" href="resume.html" data-track="resume_view">View résumé</a>
+          <a class="text-link" href="experience.html" data-track="projects_view">See projects <span>→</span></a>
         </div>
-        <div class="hero-details">
-          <span>Brooklyn, New York</span>
-          <span>English and Russian</span>
-        </div>
+        <div class="hero-meta"><span>Brooklyn, NY</span><span>English and Russian</span><span>B.S. Computer Science, NYIT</span></div>
       </div>
-
-      <aside class="profile-card profile-card-clean">
-        <img class="profile-photo" src="profile.jpg" alt="Nicholas Voronetskis">
-        <h3>Nicholas Voronetskis</h3>
-        <p class="profile-role">IT Support · Help Desk · Technical Support</p>
-        <p class="muted">B.S. Computer Science · NYIT</p>
+      <aside class="profile-portrait" aria-label="Profile">
+        <img src="profile.jpg" alt="Nicholas Voronetskis">
+        <div class="profile-caption"><strong>Nicholas Voronetskis</strong><span>IT Support · Help Desk · Technical Support</span></div>
       </aside>
     </section>
 
-    <section class="section container home-focus">
-      <p class="eyebrow">WHAT I WORK WITH</p>
-      <div class="focus-grid">
-        <div><strong>End User Support</strong><span>Windows, accounts, hardware, software, remote support</span></div>
-        <div><strong>Microsoft & Systems</strong><span>Microsoft 365, Active Directory, SCCM, VPN</span></div>
-        <div><strong>Automation</strong><span>n8n, Zapier, webhooks, REST APIs, Python</span></div>
+    <section class="proof-strip container" aria-label="Quick qualifications">
+      <div class="proof-item"><strong>End user support</strong><span>Windows, account access, Microsoft 365, remote support, hardware and software troubleshooting</span></div>
+      <div class="proof-item"><strong>Systems foundation</strong><span>Active Directory, ServiceNow, SCCM, TCP/IP, DNS, DHCP, VPN, PowerShell</span></div>
+      <div class="proof-item"><strong>Automation mindset</strong><span>Zapier, n8n, webhooks, REST APIs, Python, workflow testing and troubleshooting</span></div>
+    </section>
+
+    <section class="section container">
+      <div class="section-heading">
+        <div><p class="eyebrow">Selected work</p><h2>Projects that show the work behind the résumé.</h2></div>
+        <p>I use labs and small builds to practice the exact support, systems, and troubleshooting skills I want to keep improving.</p>
+      </div>
+      <div class="work-grid">
+        <article class="work-card">
+          <span class="project-number">01 · SUPPORT</span>
+          <h3>Microsoft 365 Administration Lab</h3>
+          <p>Created users, configured a shared mailbox and distribution list, tested permissions, and used Message Trace to troubleshoot mail flow.</p>
+          <div class="tools">Microsoft 365 · Outlook · Message Trace</div>
+        </article>
+        <article class="work-card">
+          <span class="project-number">02 · SYSTEMS</span>
+          <h3>Active Directory Lab</h3>
+          <p>Practiced users, groups, password resets, permissions, organizational units, Group Policy, and Windows Server administration.</p>
+          <div class="tools">Active Directory · Windows Server · Group Policy</div>
+        </article>
+        <article class="work-card">
+          <span class="project-number">03 · AUTOMATION</span>
+          <h3>Webhook Workflow Automation</h3>
+          <p>Built and tested a multi step workflow using webhooks, conditional logic, data transformation, loops, and REST API requests.</p>
+          <div class="tools">n8n · Zapier · Webhooks · REST APIs · JSON</div>
+        </article>
+      </div>
+      <div class="hero-actions"><a class="text-link" href="experience.html" data-track="projects_view">View all projects <span>→</span></a></div>
+    </section>
+
+    <section class="section section-border container">
+      <div class="section-heading">
+        <div><p class="eyebrow">How I work</p><h2>A support process that stays clear under pressure.</h2></div>
+        <p>Good support is not just knowing tools. It is narrowing the issue, communicating clearly, testing the fix, and leaving useful notes for the next person.</p>
+      </div>
+      <div class="process-grid">
+        <div class="process-step"><span class="step">01</span><h3>Understand</h3><p>Confirm the impact, collect the error details, and separate the symptom from the likely cause.</p></div>
+        <div class="process-step"><span class="step">02</span><h3>Troubleshoot</h3><p>Start with the safest checks, compare what works versus what does not, and test one change at a time.</p></div>
+        <div class="process-step"><span class="step">03</span><h3>Document</h3><p>Verify the result with the user, record the steps and outcome, and escalate with useful context when needed.</p></div>
       </div>
     </section>
 
-    <section id="contact-panel" class="contact-panel container" aria-hidden="true">
-      <div class="contact-card">
-        <button class="close-contact" type="button" aria-label="Close contact information" onclick="toggleContact()">×</button>
-        <p class="eyebrow">CONTACT</p>
-        <h2>Get in touch</h2>
-        <p><strong>Phone:</strong> <a href="tel:+13475879960">(347) 587-9960</a></p>
-        <p><strong>Email:</strong> <a href="mailto:voronetskisnicholas@gmail.com">voronetskisnicholas@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener">Nicholas Voronetskis</a></p>
+    <section id="contact" class="contact-section container">
+      <div class="contact-grid">
+        <div><p class="eyebrow">Contact</p><h2>Looking for someone who can support users and keep learning?</h2><p>I’m interested in Help Desk, Service Desk, Desktop Support, and Technical Support opportunities in the New York area.</p></div>
+        <div class="contact-list">
+          <div class="contact-row"><span>Email</span><a href="mailto:voronetskisnicholas@gmail.com" data-track="contact_email">voronetskisnicholas@gmail.com</a></div>
+          <div class="contact-row"><span>Phone</span><a href="tel:+13475879960" data-track="contact_phone">(347) 587-9960</a></div>
+          <div class="contact-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener" data-track="contact_linkedin">Nicholas Voronetskis</a></div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer container">
-    <span>© 2026 Nicholas Voronetskis</span>
-    <span>Help Desk and IT Support Portfolio</span>
-  </footer>
-
+  <footer class="site-footer container"><span>© 2026 Nicholas Voronetskis</span><div class="footer-links"><a href="resume.html">Résumé</a><a href="experience.html">Projects</a><a href="#contact">Contact</a></div></footer>
   <script src="script.js"></script>
 </body>
 </html>

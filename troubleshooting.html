@@ -1,84 +1,31 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-PJ1ZQS4GLR');
-</script>
-
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Troubleshooting | Nicholas Voronetskis</title>
-  <link rel="stylesheet" href="styles.css">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PJ1ZQS4GLR');</script>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Support and troubleshooting examples from Nicholas Voronetskis.">
+  <title>Support & Troubleshooting | Nicholas Voronetskis</title>
+  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <nav class="navbar container">
-      <a class="logo" href="index.html"><span class="logo-box">NV</span><span class="home-label">Home</span></a>
-      <div class="nav-links">
-        <a href="resume.html">Résumé</a>
-        <a href="experience.html">Projects</a>
-        <a class="active" href="troubleshooting.html">Troubleshooting</a>
-        <a href="blog.html">Blog</a>
-        <a href="fun-facts.html">Fun Facts</a>
-        <button class="contact-button" type="button" onclick="toggleContact()">Contact</button>
-      </div>
-    </nav>
-  </header>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header"><nav class="navbar container" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">NV</span><span class="brand-name">Nicholas Voronetskis</span></a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="resume.html">Résumé</a><a href="experience.html">Projects</a><a class="active" href="troubleshooting.html">Support</a><a href="about.html">About</a><a class="contact-link" href="#contact">Contact</a></div></nav></header>
 
-  <main>
-    <section class="page-intro container">
-      <p class="eyebrow">HELP DESK WORKFLOW</p>
-      <h1>How I approach common support problems.</h1>
-      <p>
-        I start by understanding the issue, narrowing down the cause, applying the safest fix,
-        confirming the result with the user, and documenting what happened.
-      </p>
+  <main id="main">
+    <section class="page-intro container"><p class="eyebrow">Support & troubleshooting</p><h1>How I work through technical problems.</h1><p class="lead">I try to make troubleshooting repeatable: understand the impact, isolate what changed, test the safest explanation first, verify the result, then document it clearly.</p></section>
+
+    <section class="section container">
+      <article class="support-case"><div><span class="support-label">Real support example</span></div><div><h3>Repeated application crashes across multiple staff devices</h3><p>When several staff members began seeing the same application crash, I compared affected and unaffected devices instead of treating each ticket as an isolated problem.</p><ul><li>Checked what the affected systems had in common.</li><li>Compared recent changes and identified a compatibility problem tied to an update.</li><li>Used a temporary rollback so staff could continue working while the underlying issue was addressed.</li><li>Documented the steps so the same symptoms could be recognized faster if they appeared again.</li></ul><p class="outcome"><strong>What this shows:</strong> pattern recognition, change based troubleshooting, clear documentation, and focusing on business impact.</p></div></article>
+
+      <article class="support-case"><div><span class="support-label">Microsoft 365 lab</span></div><div><h3>Shared mailbox permissions and mail flow</h3><p>In my Microsoft 365 lab, I configured a Legal Support shared mailbox and distribution list, then tested access and delivery from both user accounts.</p><ul><li>Configured Send on Behalf permissions.</li><li>Verified which actions worked from each user account.</li><li>Used Message Trace to follow mail flow and confirm the final configuration.</li></ul><p class="outcome"><strong>What this shows:</strong> I do not stop at changing a setting. I test from the user side and use available logs or admin tools to confirm the result.</p></div></article>
+
+      <article class="support-case"><div><span class="support-label">Account access</span></div><div><h3>User cannot sign in</h3><p>For an account access issue, I first narrow down whether the cause is the account, the password, the device, or connectivity.</p><ul><li>Confirm the exact error and whether the issue affects one user or multiple users.</li><li>Check for lockout, disabled status, expired password, permissions, and group access.</li><li>Verify VPN or network access when the user is remote.</li><li>Reset or unlock the account when authorized, retest with the user, then record the outcome in the ticket.</li></ul></div></article>
+
+      <article class="support-case"><div><span class="support-label">Connectivity</span></div><div><h3>Network or VPN connection issue</h3><p>I separate basic connectivity from VPN specific problems so I do not spend time troubleshooting the wrong layer.</p><ul><li>Verify the local internet connection and adapter status first.</li><li>Use tools such as ipconfig and ping to check addressing, gateway reachability, and name resolution.</li><li>Review the exact VPN error, credentials, password status, time settings, and client configuration.</li><li>Escalate with the error, tests already completed, and useful logs when the issue requires network administration.</li></ul></div></article>
     </section>
 
-    <section class="section container troubleshooting-layout">
-      <div class="issue-list">
-        <button class="issue-button active" type="button" onclick="showIssue('login', this)">User cannot sign in</button>
-        <button class="issue-button" type="button" onclick="showIssue('internet', this)">No internet connection</button>
-        <button class="issue-button" type="button" onclick="showIssue('outlook', this)">Outlook is not syncing</button>
-        <button class="issue-button" type="button" onclick="showIssue('vpn', this)">VPN will not connect</button>
-        <button class="issue-button" type="button" onclick="showIssue('slow', this)">Computer is running slowly</button>
-      </div>
-
-      <article class="resolution-box">
-        <p class="eyebrow">TROUBLESHOOTING STEPS</p>
-        <h2 id="issue-title">User cannot sign in</h2>
-        <ol id="issue-steps">
-          <li>Confirm the username and ask what error message appears.</li>
-          <li>Check whether the account is locked, disabled, or using an expired password.</li>
-          <li>Verify network or VPN access if the user is working remotely.</li>
-          <li>Reset or unlock the account when authorized, then test the login.</li>
-          <li>Document the cause, actions taken, and final result in the ticket.</li>
-        </ol>
-      </article>
-    </section>
-
-    <section id="contact-panel" class="contact-panel container" aria-hidden="true">
-      <div class="contact-card">
-        <button class="close-contact" type="button" aria-label="Close contact information" onclick="toggleContact()">×</button>
-        <p class="eyebrow">CONTACT</p>
-        <h2>Get in touch</h2>
-        <p><strong>Phone:</strong> <a href="tel:+13475879960">(347) 587-9960</a></p>
-        <p><strong>Email:</strong> <a href="mailto:voronetskisnicholas@gmail.com">voronetskisnicholas@gmail.com</a></p>
-        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener">Nicholas Voronetskis</a></p>
-      </div>
-    </section>
+    <section id="contact" class="contact-section container"><div class="contact-grid"><div><p class="eyebrow">Contact</p><h2>Need someone who can explain what they tried and why?</h2><p>I’m looking for a team where I can contribute strong support habits and keep developing deeper systems knowledge.</p></div><div class="contact-list"><div class="contact-row"><span>Email</span><a href="mailto:voronetskisnicholas@gmail.com" data-track="contact_email">voronetskisnicholas@gmail.com</a></div><div class="contact-row"><span>Phone</span><a href="tel:+13475879960" data-track="contact_phone">(347) 587-9960</a></div><div class="contact-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener" data-track="contact_linkedin">Nicholas Voronetskis</a></div></div></div></section>
   </main>
-
-  <footer class="site-footer container">
-    <span>© 2026 Nicholas Voronetskis</span>
-    <span>Help Desk and IT Support Portfolio</span>
-  </footer>
-
+  <footer class="site-footer container"><span>© 2026 Nicholas Voronetskis</span><div class="footer-links"><a href="index.html">Home</a><a href="experience.html">Projects</a><a href="#contact">Contact</a></div></footer>
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>

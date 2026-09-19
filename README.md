@@ -1,17 +1,13 @@
 # Nicholas Voronetskis IT Portfolio
 
-This is a basic multi-page portfolio built with HTML, CSS, and JavaScript.
+A static GitHub Pages portfolio focused on IT Support, Help Desk, systems administration, workflow automation, and security projects.
 
-## Main files
+## Main pages
+- `index.html` Home
+- `resume.html` Resume with downloadable PDF
+- `experience.html` Projects and hands on work
+- `troubleshooting.html` Support and troubleshooting examples
+- `about.html` About
 
-- `index.html` - homepage
-- `experience.html` - work experience and labs
-- `troubleshooting.html` - interactive Help Desk examples
-- `resume.html` - web version of the resume
-- `blog.html` - future learning posts
-- `fun-facts.html` - personal interests
-- `styles.css` - all website styling
-- `script.js` - contact dropdown and troubleshooting buttons
-- `profile.jpg` - profile picture
-
-To preview the website, open `index.html` in a browser.
+## Analytics
+Google Analytics 4 measurement ID `G-PJ1ZQS4GLR` is installed on the main pages. The site also sends lightweight custom events for resume, project, email, phone, and LinkedIn clicks.
