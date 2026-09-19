@@ -1,55 +1,122 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
-  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-PJ1ZQS4GLR');</script>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Hands on IT support, systems, automation, and cybersecurity projects by Nicholas Voronetskis.">
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PJ1ZQS4GLR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-PJ1ZQS4GLR');
+</script>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects | Nicholas Voronetskis</title>
-  <link rel="icon" href="favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="site-header"><nav class="navbar container" aria-label="Main navigation"><a class="brand" href="index.html"><span class="brand-mark">NV</span><span class="brand-name">Nicholas Voronetskis</span></a><button class="menu-button" type="button" aria-label="Open navigation" aria-expanded="false"><span></span><span></span><span></span></button><div class="nav-links"><a href="resume.html">Résumé</a><a class="active" href="experience.html">Projects</a><a href="troubleshooting.html">Support</a><a href="about.html">About</a><a class="contact-link" href="#contact">Contact</a></div></nav></header>
+  <header class="site-header">
+    <nav class="navbar container">
+      <a class="logo" href="index.html"><span class="logo-box">NV</span><span class="home-label">Home</span></a>
+      <div class="nav-links">
+        <a href="resume.html">Résumé</a>
+        <a class="active" href="experience.html">Projects</a>
+        <a href="troubleshooting.html">Troubleshooting</a>
+        <a href="blog.html">Blog</a>
+        <a href="fun-facts.html">Fun Facts</a>
+        <button class="contact-button" type="button" onclick="toggleContact()">Contact</button>
+      </div>
+    </nav>
+  </header>
 
-  <main id="main">
-    <section class="page-intro container"><p class="eyebrow">Projects</p><h1>Proof of work, not a second copy of my résumé.</h1><p class="lead">These projects show how I practice support, systems administration, automation, and security outside of my job responsibilities. Each one focuses on what I built, what I had to troubleshoot, and what the work demonstrates.</p></section>
-
-    <section class="section container projects-stack">
-      <article class="project-case">
-        <div class="project-header"><span class="project-index">01 · SUPPORT</span><div><h2>Microsoft 365 Administration & Support Lab</h2><p>Built a small Microsoft 365 environment to practice the kinds of account, mailbox, permission, and mail flow tasks that come up in support environments.</p></div></div>
-        <div class="project-body"><div class="project-block"><h4>What I set up</h4><ul><li>Admin and staff user accounts</li><li>Legal Support shared mailbox</li><li>Distribution list and mailbox permissions</li></ul></div><div class="project-block"><h4>What I troubleshot</h4><ul><li>Send on Behalf permissions</li><li>Mail delivery and access behavior</li><li>Message Trace results after configuration changes</li></ul></div><div class="project-block"><h4>What it demonstrates</h4><p>Microsoft 365 support, permission troubleshooting, careful testing, and verifying a fix from the user side.</p></div></div>
-        <div class="tools-line"><strong>Tools:</strong> Microsoft 365 · Outlook · Shared Mailboxes · Distribution Lists · Message Trace</div>
-      </article>
-
-      <article class="project-case">
-        <div class="project-header"><span class="project-index">02 · SYSTEMS</span><div><h2>Windows Server & Active Directory Lab</h2><p>Built a lab environment to practice user and access administration tasks commonly handled by Help Desk and junior systems teams.</p></div></div>
-        <div class="project-body"><div class="project-block"><h4>What I practiced</h4><ul><li>Creating users and security groups</li><li>Password resets and account access</li><li>Organizational units and permissions</li></ul></div><div class="project-block"><h4>Systems concepts</h4><ul><li>Group Policy</li><li>Role based access</li><li>Windows client and server administration</li></ul></div><div class="project-block"><h4>What it demonstrates</h4><p>A practical understanding of identity, permissions, and the account workflows behind common user access tickets.</p></div></div>
-        <div class="tools-line"><strong>Tools:</strong> Active Directory · Windows Server · Group Policy · Windows 11 · VMware / VirtualBox</div>
-      </article>
-
-      <article class="project-case">
-        <div class="project-header"><span class="project-index">03 · AUTOMATION</span><div><h2>Webhook & Workflow Automation</h2><p>Built and tested an end to end workflow that receives submitted data, checks conditions, transforms information, loops through records, and sends data to another system.</p></div></div>
-        <div class="project-body"><div class="project-block"><h4>Workflow logic</h4><ul><li>Webhook trigger</li><li>Conditional filters</li><li>Data formatting and transformation</li></ul></div><div class="project-block"><h4>Integration work</h4><ul><li>Looping through records</li><li>JSON payloads</li><li>REST API / webhook POST requests</li></ul></div><div class="project-block"><h4>What it demonstrates</h4><p>System integration, structured troubleshooting, testing data flow from start to finish, and reducing repetitive work with automation.</p></div></div>
-        <div class="flow" aria-label="Automation workflow"><div class="flow-step">Form submit</div><div class="flow-arrow">→</div><div class="flow-step">Webhook</div><div class="flow-arrow">→</div><div class="flow-step">Filter</div><div class="flow-arrow">→</div><div class="flow-step">Transform</div><div class="flow-arrow">→</div><div class="flow-step">Loop</div><div class="flow-arrow">→</div><div class="flow-step">POST request</div></div>
-        <div class="tools-line"><strong>Tools:</strong> n8n · Zapier · Webhooks · REST APIs · JSON · Conditional Logic</div>
-      </article>
-
-      <article class="project-case">
-        <div class="project-header"><span class="project-index">04 · SECURITY</span><div><h2>Home SOC Lab with Splunk</h2><p>Built a home security lab with Windows 11 and Kali Linux virtual machines to practice log review, searches, alerts, and basic incident triage.</p></div></div>
-        <div class="project-body"><div class="project-block"><h4>Environment</h4><ul><li>Windows 11 virtual machine</li><li>Kali Linux virtual machine</li><li>Splunk Free</li></ul></div><div class="project-block"><h4>What I practiced</h4><ul><li>Windows event log review</li><li>Searches and basic alerts</li><li>Incident triage and documentation</li></ul></div><div class="project-block"><h4>What it demonstrates</h4><p>Log analysis, structured investigation, and the security perspective I bring to support and systems work.</p></div></div>
-        <div class="tools-line"><strong>Tools:</strong> Splunk · Windows 11 · Kali Linux · VirtualBox · Event Logs</div>
-      </article>
-
-      <article class="project-case">
-        <div class="project-header"><span class="project-index">05 · PYTHON</span><div><h2>Threat Intelligence Aggregator</h2><p>Developed a Python project that collects, normalizes, and stores threat intelligence data from multiple external services.</p></div></div>
-        <div class="project-body"><div class="project-block"><h4>Integrations</h4><ul><li>VirusTotal</li><li>AlienVault OTX</li><li>AbuseIPDB</li></ul></div><div class="project-block"><h4>Engineering work</h4><ul><li>Authentication and API calls</li><li>SQLite storage and deduplication</li><li>Rate limit handling, logging, and error recovery</li></ul></div><div class="project-block"><h4>What it demonstrates</h4><p>Python development, API integration, defensive programming, and working with structured security data.</p></div></div>
-        <div class="tools-line"><strong>Tools:</strong> Python · REST APIs · SQLite · VirusTotal · AlienVault OTX · AbuseIPDB</div>
-      </article>
+  <main>
+    <section class="page-intro container">
+      <p class="eyebrow">PROJECTS & HANDS-ON WORK</p>
+      <h1>Projects that show how I learn, troubleshoot, and build.</h1>
+      <p>Instead of repeating my résumé, this page focuses on practical labs and projects I have completed or continue to develop.</p>
     </section>
 
-    <section id="contact" class="contact-section container"><div class="contact-grid"><div><p class="eyebrow">Contact</p><h2>Interested in how I work?</h2><p>I’m happy to walk through any of these projects and explain what I built, what went wrong, and how I worked through it.</p></div><div class="contact-list"><div class="contact-row"><span>Email</span><a href="mailto:voronetskisnicholas@gmail.com" data-track="contact_email">voronetskisnicholas@gmail.com</a></div><div class="contact-row"><span>Phone</span><a href="tel:+13475879960" data-track="contact_phone">(347) 587-9960</a></div><div class="contact-row"><span>LinkedIn</span><a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener" data-track="contact_linkedin">Nicholas Voronetskis</a></div></div></div></section>
+    <section class="section container">
+      <div class="experience-list">
+        <article class="experience-item">
+          <p class="date">Workflow Automation · 2026</p>
+          <h3>Webhook & Workflow Automation</h3>
+          <p>Built and tested an end-to-end automation workflow that receives submitted data, processes it through conditional steps, and sends it to another system.</p>
+          <ul>
+            <li>Worked with webhooks, JSON payloads, filters, looping, and REST API requests.</li>
+            <li>Configured workflow logic and tested submissions from trigger through final delivery.</li>
+            <li>Troubleshot integration and data-flow issues until the workflow processed successfully.</li>
+          </ul>
+          <div class="tag-list"><span>n8n</span><span>Zapier</span><span>Webhooks</span><span>REST APIs</span><span>JSON</span></div>
+        </article>
+
+        <article class="experience-item">
+          <p class="date">Microsoft 365 Lab</p>
+          <h3>Microsoft 365 Administration & Support</h3>
+          <p>Created a small Microsoft 365 environment to practice common support and administration tasks.</p>
+          <ul>
+            <li>Created admin and staff users and worked with mailbox and account settings.</li>
+            <li>Configured a Legal Support shared mailbox with Send on Behalf permissions and a distribution list.</li>
+            <li>Used Message Trace and tested mail flow to troubleshoot delivery and permission behavior.</li>
+          </ul>
+          <div class="tag-list"><span>Microsoft 365</span><span>Outlook</span><span>Shared Mailbox</span><span>Message Trace</span></div>
+        </article>
+
+        <article class="experience-item">
+          <p class="date">Active Directory Lab</p>
+          <h3>Windows Server & Active Directory Practice</h3>
+          <p>Built a lab environment to practice the account and access tasks commonly handled by Help Desk and junior systems teams.</p>
+          <ul>
+            <li>Practiced creating users and groups, password resets, permissions, and organizational units.</li>
+            <li>Worked with Group Policy, role-based access concepts, and Windows client/server administration.</li>
+            <li>Used the lab to reinforce account troubleshooting and access-management workflows.</li>
+          </ul>
+          <div class="tag-list"><span>Active Directory</span><span>Windows Server</span><span>Group Policy</span><span>Permissions</span></div>
+        </article>
+
+        <article class="experience-item">
+          <p class="date">Home SOC Lab · Ongoing</p>
+          <h3>Security Monitoring with Splunk</h3>
+          <p>Built a home security lab using Windows 11 and Kali Linux virtual machines to practice log analysis and incident triage.</p>
+          <ul>
+            <li>Collected and reviewed Windows event data in Splunk.</li>
+            <li>Created searches and alerts to investigate suspicious activity.</li>
+            <li>Practiced documenting findings and working through basic incident-triage steps.</li>
+          </ul>
+          <div class="tag-list"><span>Splunk</span><span>Windows 11</span><span>Kali Linux</span><span>VirtualBox</span><span>Log Analysis</span></div>
+        </article>
+
+        <article class="experience-item">
+          <p class="date">Threat Intelligence Project · 2026</p>
+          <h3>Threat Intelligence Aggregator</h3>
+          <p>Developed a Python project that collects and organizes threat-intelligence data from multiple external services.</p>
+          <ul>
+            <li>Integrated REST APIs including VirusTotal, AlienVault OTX, and AbuseIPDB.</li>
+            <li>Worked with authentication, SQLite storage, deduplication, rate limits, logging, and error recovery.</li>
+            <li>Used the project to strengthen Python, API integration, and security-data handling skills.</li>
+          </ul>
+          <div class="tag-list"><span>Python</span><span>REST APIs</span><span>SQLite</span><span>VirusTotal</span><span>Threat Intelligence</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact-panel" class="contact-panel container" aria-hidden="true">
+      <div class="contact-card">
+        <button class="close-contact" type="button" aria-label="Close contact information" onclick="toggleContact()">×</button>
+        <p class="eyebrow">CONTACT</p><h2>Get in touch</h2>
+        <p><strong>Phone:</strong> <a href="tel:+13475879960">(347) 587-9960</a></p>
+        <p><strong>Email:</strong> <a href="mailto:voronetskisnicholas@gmail.com">voronetskisnicholas@gmail.com</a></p>
+        <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/nicholas-voronetskis-90a94b221" target="_blank" rel="noopener">Nicholas Voronetskis</a></p>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer container"><span>© 2026 Nicholas Voronetskis</span><div class="footer-links"><a href="index.html">Home</a><a href="resume.html">Résumé</a><a href="#contact">Contact</a></div></footer>
+
+  <footer class="site-footer container">
+    <span>© 2026 Nicholas Voronetskis</span>
+    <span>Help Desk and IT Support Portfolio</span>
+  </footer>
+
   <script src="script.js"></script>
-</body></html>
+</body>
+</html>
