@@ -560,3 +560,30 @@ nav a:hover,
     color: #dfe7f3;
     font-size: 14px;
 }
+
+
+/* 2026 portfolio refinement: quieter navigation and cleaner home page */
+.nav-links { gap: 26px; }
+.nav-links a, nav .nav-links a {
+  min-height: auto; padding: 8px 0; border: 0; border-radius: 0; background: transparent;
+}
+.nav-links a:hover, nav .nav-links a:hover { background: transparent; border: 0; color: var(--accent); }
+.nav-links .active { color: var(--accent); border-bottom: 1px solid var(--accent); }
+.fun-button { padding: 8px 0 !important; border: 0 !important; }
+.contact-button { padding: 8px 12px; }
+.hero-clean { align-items: center; min-height: 620px; }
+.hero-clean h1 { max-width: 760px; font-size: clamp(46px, 5vw, 72px); line-height: 1.03; }
+.hero-copy { max-width: 820px; }
+.compact-actions { align-items: center; gap: 22px; }
+.text-link { color: var(--accent); font-weight: 700; }
+.profile-card-clean { padding: 28px; }
+.profile-card-clean .profile-photo { margin-bottom: 22px; }
+.home-focus { padding-top: 20px; }
+.focus-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.focus-grid > div { padding: 24px 28px; border-right: 1px solid var(--border); }
+.focus-grid > div:last-child { border-right: 0; }
+.focus-grid strong, .focus-grid span { display: block; }
+.focus-grid strong { margin-bottom: 8px; }
+.focus-grid span { color: var(--muted); line-height: 1.5; }
+.contact-panel { scroll-margin-top: 100px; }
+@media (max-width: 760px) { .focus-grid { grid-template-columns: 1fr; } .focus-grid > div { border-right: 0; border-bottom: 1px solid var(--border); } .focus-grid > div:last-child { border-bottom: 0; } }

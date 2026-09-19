@@ -1,15 +1,32 @@
 // Opens and closes the contact section on each page.
 function toggleContact() {
   const panel = document.getElementById("contact-panel");
-  const isOpening = !panel.classList.contains("open");
+  if (!panel) return;
 
-  panel.classList.toggle("open");
-  panel.setAttribute("aria-hidden", isOpening ? "false" : "true");
-
-  if (isOpening) {
-    panel.scrollIntoView({ behavior: "smooth", block: "center" });
+  const isOpen = panel.classList.contains("open");
+  if (isOpen) {
+    panel.classList.remove("open");
+    panel.setAttribute("aria-hidden", "true");
+    return;
   }
+
+  panel.classList.add("open");
+  panel.setAttribute("aria-hidden", "false");
+  requestAnimationFrame(() => {
+    panel.scrollIntoView({ behavior: "smooth", block: "center" });
+  });
 }
+
+window.addEventListener("load", () => {
+  if (window.location.hash === "#contact-panel") {
+    const panel = document.getElementById("contact-panel");
+    if (panel) {
+      panel.classList.add("open");
+      panel.setAttribute("aria-hidden", "false");
+      panel.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }
+});
 
 // Changes the troubleshooting steps when a different issue is selected.
 const supportIssues = {
